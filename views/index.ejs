@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+      $(document).ready(function(){
+
+      })
+    </script>
+  </head>
+  <body> 
+    <% if(messages.form_validation) { %>
+        <% for (var x of messages.form_validation) { %>
+        <h3><%= x %></h3>
+        <% } %>
+    <% } %>
+  <h1> Welcome to Quoting Dojo </h1>
+  <form action=/quotes method=POST>
+    Your Name:<input type=text name=name>
+    Your Quote:<textarea name=quote></textarea>
+    <input type=submit>
+  </body>
+</html>

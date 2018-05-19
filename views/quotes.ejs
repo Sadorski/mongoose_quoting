@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+      $(document).ready(function(){
+
+      })
+    </script>
+  </head>
+  <body>
+    <h1> Here are the awesome quotes!</h1>
+    <% for(var i = quotes.length - 1; i >= 0; i--) { %>
+        <h3><%= quotes[i].quote %></h3>
+        <p><%= quotes[i].name %> at <%= quotes[i].createdAt.toLocaleString() %></p>
+    <% } %>
+  </body>
+</html>
